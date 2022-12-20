@@ -31,12 +31,14 @@ class HelloWorldPlugin extends Plugin {
 
 class PyHelloWorld extends HTMLElement {
     id = 'test';
+    mount_name;
     constructor() {
         super();
     }
 
     connectedCallback() {
         this.innerHTML = `<h1>Hello, world!</h1>`;
+        this.mount_name = this.id
     }
 
 }
