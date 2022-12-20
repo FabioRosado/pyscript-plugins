@@ -2,6 +2,7 @@
 export default class HelloWorldPlugin extends Plugin {
 
     constructor() {
+        super();
         console.log("inside constructor")
     }
 
