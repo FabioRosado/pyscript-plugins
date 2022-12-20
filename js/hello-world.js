@@ -13,9 +13,12 @@ class HelloWorldPlugin extends Plugin {
     }
 
     afterStartup(runtime) {
-        if (this.autoclose) {
-            this.elem.close();
-        }
+        // if (this.autoclose) {
+        //     this.elem.close();
+        // }
+        customElements.define('py-hello-world', PyHelloWorld);
+        this.elem = document.createElement('py-hello-world');
+        document.body.append(this.elem);
     }
 
     onUserError(error) {
