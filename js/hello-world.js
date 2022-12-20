@@ -1,5 +1,5 @@
 
-export class HelloWorldPlugin extends Plugin {
+class HelloWorldPlugin extends Plugin {
 
     configure(config) {
 
