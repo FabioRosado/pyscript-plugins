@@ -14,7 +14,7 @@ export default class HelloWorldPlugin {
     }
 
     afterSetup(runtime) {
-        console.error("########## inside afterSetup"")
+        console.error("########## inside afterSetup")
     }
 
 
