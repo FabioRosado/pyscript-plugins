@@ -1,26 +1,32 @@
 export default class HelloWorldPlugin {
 
     configure(config) {
-
+        console.log("inside configure")
     }
     
 
     beforeLaunch(config) {
-        customElements.define('py-hello-world', PyHelloWorld);
-        this.elem = document.createElement('py-hello-world');
-        document.body.append(this.elem);
+        try {
+            customElements.define('py-hello-world', PyHelloWorld);
+            this.elem = document.createElement('py-hello-world');
+            document.body.append(this.elem);
+        } catch(e) {
+            console.error(e)
+        }
     }
 
     afterStartup(runtime) {
-        // if (this.autoclose) {
-        //     this.elem.close();
-        // }
-        customElements.define('py-hello-world', PyHelloWorld);
-        this.elem = document.createElement('py-hello-world');
-        document.body.append(this.elem);
+        try {
+            customElements.define('py-hello-world', PyHelloWorld);
+            this.elem = document.createElement('py-hello-world');
+            document.body.append(this.elem);
+        } catch(e) {
+            console.error(e)
+        }
     }
 
     onUserError(error) {
+        console.error({error})
         // if (this.elem !== undefined) {
         //     // Remove the splashscreen so users can see the banner better
         //     this.elem.remove();
@@ -37,7 +43,7 @@ class PyHelloWorld extends HTMLElement {
 
     connectedCallback() {
         this.innerHTML = `<h1>Hello, world!</h1>`;
-        this.mount_name = this.id
+        this.mount_name = this.id;
     }
 
 }
