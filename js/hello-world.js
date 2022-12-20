@@ -1,5 +1,6 @@
+import { Plugin } from 'pyscript'
 
-class HelloWorldPlugin extends Plugin {
+export class HelloWorldPlugin extends Plugin {
 
     configure(config) {
 
