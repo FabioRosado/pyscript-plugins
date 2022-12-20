@@ -1,4 +1,3 @@
-import Plugin from pyscript
 
 export class HelloWorldPlugin extends Plugin {
 
