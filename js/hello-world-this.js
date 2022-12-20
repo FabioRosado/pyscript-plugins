@@ -1,10 +1,14 @@
 export default class HelloWorldPlugin {
 
+    constructor() {
+        console.log("inside constructor")
+    }
+
     configure(config) {
         console.log("inside configure")
     }
 
-    async afterStartup(runtime) {
+    afterStartup(runtime) {
         console.error(runtime)
         try {
             customElements.define('py-hello-world', PyHelloWorld);
