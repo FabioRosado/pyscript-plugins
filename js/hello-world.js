@@ -26,7 +26,7 @@ class HelloWorldPlugin extends Plugin {
     }
 }
 
-export class PyHelloWorld extends HTMLElement {
+class PyHelloWorld extends HTMLElement {
     id = 'test';
     constructor() {
         super();
