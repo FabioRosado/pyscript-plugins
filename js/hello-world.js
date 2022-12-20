@@ -1,4 +1,4 @@
-class HelloWorldPlugin extends Plugin {
+export default class HelloWorldPlugin extends Plugin {
 
     configure(config) {
 
