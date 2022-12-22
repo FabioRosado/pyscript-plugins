@@ -1,4 +1,4 @@
-export default class HelloWorldPlugin {
+class HelloWorldPlugin {
     afterStartup(runtime) {
         try {
             customElements.define('py-hello-world', PyHelloWorld);
